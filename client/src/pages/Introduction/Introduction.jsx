@@ -50,7 +50,7 @@ const Introduction = ({setSelectedView}) => {
             sx={{ textTransform: "none", bgcolor: "#fe328e", borderRadius: 4 }}
             endIcon={<GitHubIcon />}
              onClick={() =>
-              window.open("https://github.com/LuciferTyagi?tab=repositories", "_blank")
+              window.open("https://github.com/LuciferTyagi/chat-bot-flow/tree/main/client", "_blank")
             }
           >
             Github

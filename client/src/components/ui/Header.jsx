@@ -11,7 +11,11 @@ const Header = ({ heading  ,onSave , onRestore  , btnControls = false , secondar
         color:'grey'
       }}>{heading}</Typography>
       {secondaryControl && (
-        <IconButton >
+        <IconButton 
+         onClick={() =>
+              window.open("https://github.com/LuciferTyagi/chat-bot-flow/tree/main/client", "_blank")
+            }
+        >
           <GitHubIcon sx={{
             fontSize:'21px'
           }}/>
