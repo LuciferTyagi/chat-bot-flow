@@ -14,9 +14,9 @@ A visual chatbot flow builder built with React. It allows users to create conver
 
 ### Clone the Repository
 
-git clone https://github.com/your-username/chat-bot-flow.git
-cd chat-bot-flow/client
-npm install
+- git clone https://github.com/your-username/chat-bot-flow.git
+- cd chat-bot-flow/client
+- npm install
 
 ## Features
 
@@ -97,6 +97,9 @@ export const NODE_PALETTE = [
   // Add more node types as needed
 ];
 ```
+
+![Preview](public/assets/preview.png)
+
 
 # Author
  Made by Yagyansh Tyagi

@@ -4,8 +4,8 @@ import ChatIcon from "@mui/icons-material/Chat";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Handle, Position, useReactFlow } from "reactflow";
 import ClearIcon from "@mui/icons-material/Clear";
-const MessageNode = ({ id, data , selected }) => {
-  const { setNodes } = useReactFlow();
+const MessageNode = ({ id, data, selected }) => {
+  const { setNodes, setEdges } = useReactFlow();
   return (
     <Box
       bgcolor={""}
@@ -17,7 +17,7 @@ const MessageNode = ({ id, data , selected }) => {
         boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
         gap: 1,
         overflow: "hidden",
-        border: selected ? "1px solid #fe328e" : "none"
+        border: selected ? "1px solid #fe328e" : "none",
       }}
     >
       <Stack
@@ -50,6 +50,11 @@ const MessageNode = ({ id, data , selected }) => {
               e.stopPropagation();
               setNodes((prevNodes) =>
                 prevNodes.filter((node) => node?.id !== id)
+              );
+              setEdges((prevEdges) =>
+                prevEdges.filter(
+                  (edge) => edge.source !== id && edge.target !== id
+                )
               );
             }}
           >
