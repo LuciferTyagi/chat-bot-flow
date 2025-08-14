@@ -58,7 +58,7 @@ const FlowCanvas = ({
       const edge = {
         ...connection,
         animated: true,
-        id: `edge-${Date.now()}`, // safer unique id
+        id: `edge-${Date.now()}`,
         type: "customEdge",
         markerEnd: {
           type: MarkerType.ArrowClosed,
@@ -70,12 +70,11 @@ const FlowCanvas = ({
     [edges, setEdges]
   );
 
-  // Allow dropping by preventing default
   const onDragOver = useCallback((event) => {
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";
   }, []);
-  // Handle drop: read type, calculate position, add node
+
   const onDrop = useCallback(
     (event) => {
       event.preventDefault();
